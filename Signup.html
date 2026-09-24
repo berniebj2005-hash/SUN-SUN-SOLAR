@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Sun Son Solar - Sign Up</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <form id="signupForm" class="signup-form" onsubmit="showSuccess(event)">
+    <h2>Sun Son Solar</h2>
+
+    <!-- Step 1 -->
+    <div id="step1">
+      <label>First Name</label>
+      <input type="text" name="first_name" required>
+
+      <label>Middle Name</label>
+      <input type="text" name="middle_name">
+
+      <label>Last Name</label>
+      <input type="text" name="last_name" required>
+
+      <label>BirthDate</label>
+      <input type="date" name="birthdate" required>
+
+      <label>Gender</label>
+      <input type="text" name="gender" required>
+
+      <label>Email</label>
+      <input type="email" name="email" required>
+
+      <label>Phone Number</label>
+      <input type="number" name="phone" required>
+
+      <label>Address</label>
+      <input type="text" name="address" required>
+
+      <button type="button" onclick="goNext()">Continue</button>
+    </div>
+
+    <!-- Step 2 -->
+    <div id="step2" style="display: none;">
+      <label>Username</label>
+      <input type="text" name="username" required>
+
+      <label>Password</label>
+      <input type="password" name="password" required>
+
+      <button type="submit">Create Account</button>
+    </div>
+
+    <!-- Step 3 -->
+    <div id="step3" style="display: none; text-align: center;">
+      <p style="color: green; font-weight: bold; margin-top: 15px;">
+        Account Created Successfully!
+      </p>
+
+      <a href="registration.html">Go back to Login Page</a>
+    </div>
+
+  </form>
+
+  <script>
+    function goNext() {
+      const step1Inputs = document.querySelectorAll('#step1 input[required]');
+      let allValid = true;
+
+      
+      step1Inputs.forEach(input => {
+        if (!input.reportValidity()) {
+          allValid = false;
+        }
+      });
+
+      if (allValid) {
+        document.getElementById('step1').style.display = 'none';
+        document.getElementById('step2').style.display = 'block';
+      }
+    }
+
+    function showSuccess(e) {
+      e.preventDefault(); 
+      document.getElementById('step2').style.display = 'none';
+      document.getElementById('step3').style.display = 'block';
+    }
+  </script>
+
+</body>
+</html>
