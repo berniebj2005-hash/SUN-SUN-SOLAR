@@ -11,7 +11,7 @@ The website is designed to be clean and simple, ensuring customers have a smooth
 ### Products
 * **Products:** Solar Panels, Inverters, Batteries, Racking & Mounting Equipment, and Wiring.
   
-* **Services:** Consultation, System Design, Permitting, Professional Installation, Maintenance, Repair, and Performance Monitoring.
+* **Services:** Consultation, System Design, Permitting, Professional Installation, Maintenance, Repair, and Performance Monitoring. 
 
 ---
 
