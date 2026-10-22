@@ -1,0 +1,108 @@
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #fef5e7 0%, #f4f6f9 100%);
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+
+.signup-form {
+    background: #ffffff;
+    padding: 35px 30px;
+    border-radius: 10px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 420px;
+    box-sizing: border-box;
+}
+
+
+.signup-form h2 {
+    color: #e67e22;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 24px;
+    letter-spacing: 0.5px;
+}
+
+
+label {
+    display: block;
+    font-weight: 600;
+    font-size: 13px;
+    margin-bottom: 6px;
+    color: #444;
+}
+
+
+input[type="text"],
+input[type="date"],
+input[type="email"],
+input[type="number"],
+input[type="password"] {
+    width: 100%;
+    padding: 10px 12px;
+    margin-bottom: 16px;
+    box-sizing: border-box;
+    border: 1px solid #dcdde1;
+    border-radius: 6px;
+    font-size: 14px;
+    background-color: #fdfefe;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+input:focus {
+    border-color: #f39c12;
+    box-shadow: 0 0 5px rgba(243, 156, 18, 0.3);
+    outline: none;
+}
+
+
+button {
+    width: 100%;
+    padding: 12px;
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    margin-top: 10px;
+}
+
+button:hover {
+    background-color: #e67e22;
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Success Step Links */
+#step3 p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+#step3 a {
+    display: inline-block;
+    color: #f39c12;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 14px;
+    margin-top: 10px;
+    transition: color 0.2s;
+}
+
+#step3 a:hover {
+    color: #d35400;
+    text-decoration: underline;
+}

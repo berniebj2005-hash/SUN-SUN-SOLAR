@@ -1,49 +1,129 @@
+/* General Layout & Styling */
 body {
-  font-family: Arial, sans-serif;
-  background: #f4f4f4;
-  display: flex;
-  justify-content: center;
-  padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f4f6f9;
+    margin: 0;
+    padding: 0;
+    color: #333;
 }
 
-.signup-form {
-  background: white;
-  padding: 20px;
-  border-radius: 8px;
-  width: 300px;
+/* Navbar */
+.navbar {
+    background-color: #ffffff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
 }
 
-h2 {
-  text-align: center;
-  color: #e67e22;
-  margin-top: 0;
+.logo {
+    font-weight: bold;
+    color: #f39c12;
+    font-size: 18px;
+}
+
+.navbar nav a {
+    text-decoration: none;
+    color: #555;
+    margin-left: 20px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.navbar nav a:hover {
+    color: #f39c12;
+}
+
+/* Container */
+.container {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 0 15px;
+}
+
+/* Cards */
+.card {
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    margin-bottom: 25px;
+}
+
+/* Form Styles */
+.signup-form h2 {
+    color: #f39c12;
+    margin-top: 0;
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 label {
-  display: block;
-  margin-top: 10px;
-  font-size: 14px;
+    display: block;
+    font-weight: bold;
+    font-size: 13px;
+    margin-bottom: 5px;
+    color: #333;
 }
 
-input, select, textarea {
-  width: 100%;
-  padding: 8px;
-  margin-top: 4px;
-  box-sizing: border-box;
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
 }
 
-button {
-  width: 100%;
-  padding: 10px;
-  background: #e67e22;
-  color: white;
-  border: none;
-  border-radius: 4px;
-  margin-top: 15px;
-  font-weight: bold;
-  cursor: pointer;
+input:focus {
+    border-color: #f39c12;
+    outline: none;
 }
 
-button:hover {
-  background: #d35400;
+button[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #f39c12;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: #e67e22;
+}
+
+.signup-link {
+    text-align: center;
+    margin-top: 15px;
+    font-size: 13px;
+}
+
+.signup-link a {
+    color: #f39c12;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.signup-link a:hover {
+    text-decoration: underline;
+}
+
+/* Lists styling for Products & Services */
+ul {
+    padding-left: 20px;
+    margin: 10px 0 0 0;
+}
+
+ul li {
+    margin-bottom: 6px;
+    font-size: 14px;
+    color: #555;
 }

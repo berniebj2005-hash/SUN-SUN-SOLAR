@@ -1,24 +1,76 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Sun Son Solar - Sign Up</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sun Son Solar</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <form class="signup-form">
-    <h2>Sun Son Solar</h2>
+    
+    <header class="navbar">
+        <div class="logo">☀️ Sun Son Solar</div>
+        <nav>
+            <a href="#login">Login</a>
+            <a href="#about">About Us</a>
+            <a href="#products">Products</a>
+            <a href="#services">Services</a>
+        </nav>
+    </header>
 
-    <label>Username</label>
-    <input type="text" required>
+    <div class="container">
 
-    <label>Password</label>
-    <input type="password" required>
+        
+        <section id="login" class="card">
+            <form class="signup-form">
+                <h2>Sun Son Solar Login</h2>
 
-    <button type="submit">Login</button>
+                <label>Username</label>
+                <input type="text" placeholder="Enter username" required>
 
-    <label>Dont Have An Account? <a href="Signup.html">Create a New Account</a></label>
-  </form>
+                <label>Password</label>
+                <input type="password" placeholder="Enter password" required>
+
+                <button type="submit">Login</button>
+
+                <div class="signup-link">
+                    <span>Don't Have An Account?</span> <a href="signup.html">Create a New Account</a>
+                </div>
+            </form>
+        </section>
+
+        
+        <section id="about" class="card">
+            <h2>About Us</h2>
+            <p>Founded by Katherine "Kat" Sinagaraw and Santino "Sonny" Sinagaraw in Pasig City, Sun Son Solar is dedicated to bringing clean, sustainable, and reliable solar energy solutions to homes and businesses.</p>
+        </section>
+
+        
+        <section id="products" class="card">
+            <h2>Our Products</h2>
+            <ul>
+                <li>Solar Panels</li>
+                <li>Inverters</li>
+                <li>Batteries</li>
+                <li>Racking and Mounting</li>
+                <li>Wires & Accessories</li>
+            </ul>
+        </section>
+
+        
+        <section id="services" class="card">
+            <h2>Our Services</h2>
+            <ul>
+                <li>Consultation & System Designing</li>
+                <li>Permitting Assistance</li>
+                <li>Professional Installation</li>
+                <li>Maintenance & Repairs</li>
+                <li>System Monitoring</li>
+            </ul>
+        </section>
+
+    </div>
 
 </body>
 </html>
