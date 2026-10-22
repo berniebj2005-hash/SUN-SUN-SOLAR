@@ -84,7 +84,8 @@ input:focus {
     outline: none;
 }
 
-button[type="submit"] {
+.login-btn {
+    display: block;
     width: 100%;
     padding: 10px;
     background-color: #f39c12;
@@ -93,10 +94,14 @@ button[type="submit"] {
     border-radius: 4px;
     font-size: 16px;
     font-weight: bold;
+    text-align: center;
+    text-decoration: none;
     cursor: pointer;
+    box-sizing: border-box;
+    margin-top: 15px;
 }
 
-button[type="submit"]:hover {
+.login-btn:hover {
     background-color: #e67e22;
 }
 
