@@ -1,0 +1,24 @@
+</main>
+<footer class="footer">
+    <div class="wrap footgrid">
+        <div>
+            <div class="brand"><span class="sun">☀</span> SUN SON <b>SOLAR</b></div>
+            <p>Solar products and services from consultation to monitoring.</p><small>Company origin: Pasig City,
+                Philippines.</small>
+        </div>
+        <div><b>Explore</b>
+            <p><a href="<?= site_url('products') ?>">Products</a></p>
+            <p><a href="<?= site_url('services') ?>">Services</a></p>
+            <p><a href="<?= site_url('quote') ?>">Request a quote</a></p>
+        </div>
+        <div><b>Contact</b>
+            <p>Use our quote form to reach the team.</p><small>Official contact details and social links: to be provided
+                by the company.</small>
+        </div>
+    </div>
+    <div class="wrap footbottom">© <?= date('Y') ?> Sun Son Solar. All rights reserved. · Sample website for
+        development.</div>
+</footer>
+</body>
+
+</html>
