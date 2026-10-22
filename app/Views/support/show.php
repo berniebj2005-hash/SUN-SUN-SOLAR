@@ -1,3 +1,23 @@
-<?= view('partials/header',['pageTitle'=>'Ticket #'.$ticket['ticket_id']]) ?><section class="section wrap"><a href="<?= site_url('support') ?>">← All tickets</a><h1><?= esc($ticket['subject']) ?></h1><p>Status: <?= esc($ticket['ticket_status']) ?></p><article class="card"><p><?= nl2br(esc($ticket['description'])) ?></p></article><h2>Conversation</h2><?php foreach($messages as $m): ?><article class="card" style="margin:10px 0"><strong><?= esc($m['username']) ?></strong> · <?= esc($m['sent_at']) ?><p><?= nl2br(esc($m['message_text'])) ?></p></article><?php endforeach; ?>
-<?php if($ticket['ticket_status']!=='closed'): ?><form action="<?= site_url('support/'.$ticket['ticket_id'].'/reply') ?>" method="post" class="card form-stack"><?= csrf_field() ?><label>Reply<textarea name="message_text" maxlength="5000" required></textarea></label><button type="submit">Send reply</button></form><?php endif; ?>
-<?php if(session('role')!=='customer'): ?><form action="<?= site_url('support/'.$ticket['ticket_id'].'/status') ?>" method="post" class="card form-stack"><?= csrf_field() ?><label>Update status<select name="ticket_status"><?php foreach(['open','in_progress','resolved','closed'] as $s): ?><option value="<?= esc($s) ?>" <?= $ticket['ticket_status']===$s?'selected':'' ?>><?= esc($s) ?></option><?php endforeach; ?></select></label><button type="submit">Update status</button></form><?php endif; ?></section><?= view('partials/footer') ?>
+<?= view('partials/header', ['pageTitle' => 'Ticket #' . $ticket['ticket_id']]) ?>
+<section class="section wrap"><a href="<?= site_url('support') ?>">← All tickets</a>
+    <h1><?= esc($ticket['subject']) ?></h1>
+    <p>Status: <?= esc($ticket['ticket_status']) ?></p>
+    <article class="card">
+        <p><?= nl2br(esc($ticket['description'])) ?></p>
+    </article>
+    <h2>Conversation</h2><?php foreach ($messages as $m): ?>
+        <article class="card" style="margin:10px 0"><strong><?= esc($m['username']) ?></strong> · <?= esc($m['sent_at']) ?>
+            <p><?= nl2br(esc($m['message_text'])) ?></p>
+        </article><?php endforeach; ?>
+    <?php if ($ticket['ticket_status'] !== 'closed'): ?>
+        <form action="<?= site_url('support/' . $ticket['ticket_id'] . '/reply') ?>" method="post" class="card form-stack">
+            <?= csrf_field() ?><label>Reply<textarea name="message_text" maxlength="5000"
+                    required></textarea></label><button type="submit">Send reply</button></form><?php endif; ?>
+    <?php if (session('role') !== 'customer'): ?>
+        <form action="<?= site_url('support/' . $ticket['ticket_id'] . '/status') ?>" method="post" class="card form-stack">
+            <?= csrf_field() ?><label>Update status<select
+                    name="ticket_status"><?php foreach (['open', 'in_progress', 'resolved', 'closed'] as $s): ?>
+                        <option value="<?= esc($s) ?>" <?= $ticket['ticket_status'] === $s ? 'selected' : '' ?>><?= esc($s) ?></option>
+                    <?php endforeach; ?>
+                </select></label><button type="submit">Update status</button></form><?php endif; ?>
+</section><?= view('partials/footer') ?>

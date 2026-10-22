@@ -1,6 +1,23 @@
-<?= view('partials/header',['pageTitle'=>'New employee']) ?><section class="section wrap"><h1>Create employee account</h1><p>Only HR and admins can create employee accounts. Admin role is intentionally excluded from this form.</p><form method="post" action="<?= site_url('staff/employees') ?>" class="card form-stack"><?= csrf_field() ?>
-<?php foreach(['first_name'=>'First name','middle_name'=>'Middle name','last_name'=>'Last name','email'=>'Email','username'=>'Username','phone_number'=>'Phone number','address'=>'Address','position_title'=>'Position title'] as $field=>$label): ?><label><?= esc($label) ?><input name="<?= esc($field) ?>" value="<?= esc(old($field)) ?>" <?= in_array($field,['first_name','last_name','email','username'],true)?'required':'' ?>></label><?php endforeach; ?>
-<label>Birthdate<input type="date" name="birthdate"></label><label>Gender<input name="gender"></label>
-<label>Department<select name="department_id" required><option value="">Choose department</option><?php foreach($departments as $d): ?><option value="<?= esc($d['department_id']) ?>"><?= esc($d['department_name']) ?></option><?php endforeach; ?></select></label>
-<label>Employee role<select name="role_id" required><option value="">Choose role</option><?php foreach($roles as $role): ?><option value="<?= esc($role['role_id']) ?>"><?= esc($role['role_name']) ?></option><?php endforeach; ?></select></label>
-<label>Temporary password (12+ characters)<input type="password" name="password" minlength="12" required></label><label>Confirm password<input type="password" name="password_confirm" minlength="12" required></label><button class="btn" type="submit">Create employee</button></form></section><?= view('partials/footer') ?>
+<?= view('partials/header', ['pageTitle' => 'New employee']) ?>
+<section class="section wrap">
+    <h1>Create employee account</h1>
+    <p>Only HR and admins can create employee accounts. Admin role is intentionally excluded from this form.</p>
+    <form method="post" action="<?= site_url('staff/employees') ?>" class="card form-stack"><?= csrf_field() ?>
+        <?php foreach (['first_name' => 'First name', 'middle_name' => 'Middle name', 'last_name' => 'Last name', 'email' => 'Email', 'username' => 'Username', 'phone_number' => 'Phone number', 'address' => 'Address', 'position_title' => 'Position title'] as $field => $label): ?><label><?= esc($label) ?><input
+                    name="<?= esc($field) ?>" value="<?= esc(old($field)) ?>"
+                    <?= in_array($field, ['first_name', 'last_name', 'email', 'username'], true) ? 'required' : '' ?>></label><?php endforeach; ?>
+        <label>Birthdate<input type="date" name="birthdate"></label><label>Gender<input name="gender"></label>
+        <label>Department<select name="department_id" required>
+                <option value="">Choose department</option><?php foreach ($departments as $d): ?>
+                    <option value="<?= esc($d['department_id']) ?>"><?= esc($d['department_name']) ?></option>
+                <?php endforeach; ?>
+            </select></label>
+        <label>Employee role<select name="role_id" required>
+                <option value="">Choose role</option><?php foreach ($roles as $role): ?>
+                    <option value="<?= esc($role['role_id']) ?>"><?= esc($role['role_name']) ?></option><?php endforeach; ?>
+            </select></label>
+        <label>Temporary password (12+ characters)<input type="password" name="password" minlength="12"
+                required></label><label>Confirm password<input type="password" name="password_confirm" minlength="12"
+                required></label><button class="btn" type="submit">Create employee</button>
+    </form>
+</section><?= view('partials/footer') ?>
